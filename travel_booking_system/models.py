@@ -24,4 +24,15 @@ class Trip(Base):
 
     bookings = relationship("Booking", back_populates="trip")
 
+class Booking(Base):
+    __tablename__ = "bookings"
+
+    id = Column(Integer, primary_key=True)
+    traveler_id = Column(Integer, ForeignKey("travelers.id"))
+    trip_id = Column(Integer, ForeignKey("trips.id"))
+    booking_date = Column(Date, nullable=False)
+    status = Column(String, default="Confirmed")
+
+    traveler = relationship("Traveler", back_populates="bookings")
+    trip = relationship("Trip", back_populates="bookings")
 
