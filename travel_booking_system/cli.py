@@ -3,6 +3,11 @@ from crud.traveler_crud import add_traveler, list_travelers
 from crud.trip_crud import add_trip, list_trips
 from crud.booking_crud import add_booking, cancel_booking, get_traveler_bookings, get_trip_bookings
 
+from database import engine, Base
+from  models import Traveler, Trip, Booking
+
+Base.metadata.create_all(bind=engine)
+
 # ----------------- Traveler  Commands -----------------
 @click.group()
 def traveler():
@@ -64,6 +69,7 @@ cli.add_command(traveler)
 cli.add_command(admin)
 
 if __name__ == "__main__":
+    Base.metadata.create_all(bind=engine)
     cli()
 
 
