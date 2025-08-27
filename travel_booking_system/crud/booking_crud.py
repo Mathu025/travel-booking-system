@@ -25,7 +25,6 @@ def add_booking(traveler_id, trip_id):
     )
     session.add(booking)
     session.commit()
-    session.refresh(booking)
     session.close()
     return booking, "Booking confirmed"
 

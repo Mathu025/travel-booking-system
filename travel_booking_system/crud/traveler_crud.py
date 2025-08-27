@@ -11,7 +11,6 @@ def add_traveler(name, email, phone, passport_number):
     )
     session.add(traveler)
     session.commit()
-    session.refresh(traveler)
     session.close()
     return traveler
 

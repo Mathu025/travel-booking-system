@@ -12,7 +12,6 @@ def add_trip(destination, start_date, end_date, capacity):
     )
     session.add(trip)
     session.commit()
-    session.refresh(trip)
     session.close()
     return trip
 
