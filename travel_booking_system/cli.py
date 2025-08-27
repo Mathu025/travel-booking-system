@@ -54,3 +54,17 @@ def view_bookings(trip_id):
 
 
 
+# ----------------- Main CLI -----------------
+@click.group()
+def cli():
+    """Travel Booking System CLI"""
+    pass
+
+cli.add_command(traveler)
+cli.add_command(admin)
+
+if __name__ == "__main__":
+    cli()
+
+
+
