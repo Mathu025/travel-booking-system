@@ -12,9 +12,9 @@ travelers_data = [
 ]
 
 trips_data = [
-    {"destination": "Paris", "start_date": date(2025-09-08), "end_date": date(2025-10-10), "capacity": 25},
-    {"destination": "Dubai", "start_date": date(2025-10-10), "end_date": date(2025-11-18), "capacity": 15},
-    {"destination": "Egypt", "start_date": date(2025-11-20), "end_date": date(2025-12-20), "capacity": 30}
+    {"destination": "Paris", "start_date": date(2025, 9, 8), "end_date": date(2025, 10, 10), "capacity": 25},
+    {"destination": "Dubai", "start_date": date(2025, 10, 10), "end_date": date(2025, 11, 18), "capacity": 15},
+    {"destination": "Egypt", "start_date": date(2025, 11, 20), "end_date": date(2025, 12, 20), "capacity": 30}
 ]
 
 session = SessionLocal()
