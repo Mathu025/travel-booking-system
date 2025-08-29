@@ -1,7 +1,7 @@
 import click
 from crud.traveler_crud import add_traveler, list_travelers, get_traveler, delete_traveler
 from crud.trip_crud import add_trip, list_trips, get_trip, delete_trip
-from crud.booking_crud import add_booking, cancel_booking, get_traveler_bookings
+from crud.booking_crud import add_booking, list_bookings, cancel_booking, get_traveler_bookings, get_trip_bookings
 
 @click.command()
 def menu():
@@ -64,9 +64,28 @@ def manage_trips():
     elif choice == 4:
         delete_trip()
 
+def manage_bookings():
+    click.secho("\n----- Manage Bookings -----", fg="cyan")
+    click.secho("1. Add Booking", fg="green")
+    click.secho("2. View Bookings ", fg="green")
+    click.secho("3. Get Traveler Bookings", fg="green")
+    click.secho("4. Get Trip Bookings", fg="green")
+    click.secho("5. Cancel Bookings", fg="yellow")
 
+    choice = click.prompt("Enter your choice", type=int)
 
-
+    if choice == 1:
+        add_booking()
+    elif choice == 2:
+        list_bookings()
+    elif choice == 3:
+        get_traveler_bookings()
+    elif choice == 4:
+        get_trip_bookings()
+    elif choice == 5:
+        cancel_booking()
+    else:
+        click.secho("Invalid Choice. Try again.", fg="red")
 
 if __name__ == "__main__":
     menu()
