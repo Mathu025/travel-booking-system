@@ -112,7 +112,7 @@ One Trip can have many Bookings.
 
 - git clone <https://github.com/Mathu025/travel-booking-system>
 
-- Press Code . if opened from external terminal to open in VS Code.
+- Press code . if opened from external terminal to open in VS Code.
 
 ### Create a virtual env and install dependencies
 
