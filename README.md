@@ -1,5 +1,7 @@
 # TRAVEL BOOKING SYSTEM
 
+** By Mathu Alex **
+
 - A simple **CLI-Based Travel Booking system** built with **Python**, **Click** and **SQLALCHEMY**, with database migrations handled via **Alembic**. 
 - It allows you to manage travelers, trips and bookings through an interactive command-line interface.
 
