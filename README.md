@@ -124,7 +124,7 @@ One Trip can have many Bookings.
 - python -m venv venv
 - source venv/bin/activate   # Linux/macOS
 - venv\Scripts\activate      # Windows
-- pip install pip install SQLAlchemy click
+- pip install SQLAlchemy click
 
 
 ### Seed the database
