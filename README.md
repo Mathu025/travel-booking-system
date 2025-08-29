@@ -112,14 +112,20 @@ One Trip can have many Bookings.
 
 - git clone <https://github.com/Mathu025/travel-booking-system>
 
+- cd travel-booking-system
+
 - Press code . if opened from external terminal to open in VS Code.
+
+- cd travel_booking_system
+
 
 ### Create a virtual env and install dependencies
 
 - python -m venv venv
 - source venv/bin/activate   # Linux/macOS
 - venv\Scripts\activate      # Windows
-- pip install -r requirements.txt
+- pip install pip install SQLAlchemy click
+
 
 ### Seed the database
 
