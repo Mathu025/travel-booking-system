@@ -27,23 +27,44 @@ def menu():
             click.secho("Invalid Choice. Try again.", fg="red")
 
 def manage_travelers():
-            click.secho("\n----- Manage Trips -----", fg="cyan")
-            click.secho("1. Add Traveler", fg="green")
-            click.secho("2. View Travelers", fg="green")
-            click.secho("3. Get Traveler", fg="green")
-            click.secho("4. Delete Traveler", fg="green")
-            click.secho("5. Back to Main Menu", fg="yellow")
+    click.secho("\n----- Manage Travelers -----", fg="cyan")
+    click.secho("1. Add Traveler", fg="green")
+    click.secho("2. View Travelers", fg="green")
+    click.secho("3. Get Traveler", fg="green")
+    click.secho("4. Delete Traveler", fg="green")
+    click.secho("5. Back to Main Menu", fg="yellow")
 
-            choice = click.prompt("Enter your choice", type=int)
+    choice = click.prompt("Enter your choice", type=int)
 
-            if choice == 1:
-                add_traveler()
-            elif choice == 2:
-                list_travelers()
-            elif choice == 3:
-                get_traveler()
-            elif choice == 4:
-                delete_traveler()
+    if choice == 1:
+        add_traveler()
+    elif choice == 2:
+        list_travelers()
+    elif choice == 3:
+        get_traveler()
+    elif choice == 4:
+        delete_traveler()
+
+def manage_trips():
+    click.secho("\n----- Manage Trips -----", fg="cyan")
+    click.secho("1. Add Trip", fg="green")
+    click.secho("2. View Trips", fg="green")
+    click.secho("3. Get Trip", fg="green")
+    click.secho("4. Delete Trip", fg="green")
+    click.secho("5. Back to Main Menu", fg="yellow")
+
+    choice = click.prompt("Enter your choice", type=int)
+
+    if choice == 1:
+        add_trip()
+    elif choice == 2:
+        list_trips()
+    elif choice == 3:
+        get_trip()
+    elif choice == 4:
+        delete_trip()
+
+
 
 
 
