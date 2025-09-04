@@ -1,5 +1,5 @@
 from database import SessionLocal, Base, engine
-from models import Traveler, Trip
+from models import Traveler, Trip, Booking
 from datetime import date
 
 Base.metadata.drop_all(bind=engine)
@@ -17,17 +17,34 @@ trips_data = [
     {"destination": "Egypt", "start_date": date(2025, 11, 20), "end_date": date(2025, 12, 20), "capacity": 30}
 ]
 
+
 session = SessionLocal()
 
+travelers = []
 for t in travelers_data:
     traveler = Traveler(**t)
     session.add(traveler)
+    travelers.append(traveler)
 
+trips = []
 for tr in trips_data:
     trip = Trip(**tr)
     session.add(trip)
+    trips.append(trip)
+
+session.commit()
+
+bookings_data = [
+    {"traveler_id": travelers[0].id, "trip_id": trips[0].id,"booking_date": date.today(), "status": "Confirmed"},
+    {"traveler_id": travelers[1].id, "trip_id": trips[1].id,"booking_date": date.today(), "status": "Confirmed"},
+    {"traveler_id": travelers[2].id, "trip_id": trips[2].id,"booking_date": date.today(), "status": "Confirmed"},
+]
+
+for b in bookings_data:
+    booking = Booking(**b)
+    session.add(booking)
 
 session.commit()
 session.close()
 
-print("Seed data added successfully!")
+print("Seed data added successfully!") 
